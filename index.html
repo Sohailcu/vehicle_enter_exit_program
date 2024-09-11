@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+  <title>Vehicle Enter & Exit System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+        <h1>Vehicle Entry & Exit System</h1>
+            
+        <form id="vehicleForm">
+        <!-- <p><strong>Vehicle ID:</strong> Auto-Generated</p> -->
+    <div>
+         <label for="enterExitStatus">Enter/Exit Status</label>
+              <select id="enterExitStatus" placeholder="Select Status" required>
+                  <option value="Enter">Enter</option>
+                  <option value="Exit">Exit</option>
+            </select>
+    </div>
+    <div>
+        <label for="vehicleType">Vehicle Type</label>
+              <select id="vehicleType" placeholder="Select Type" required>
+                <option value="HTV">HTV</option>
+                <option value="LTV">LTV</option>
+                <option value="Car">Car</option>
+                <option value="Bike">Bike</option>
+            </select>
+    </div>
+    <div>
+       <label for="registrationNumber">Registration Number</label>
+          <input type="text" id="registrationNumber" placeholder="Enter Vehicle Registration Number" required>
+    </div>
+          <button type="submit">Log Vehicle Entry</button>
+  </form>
+         
+    <h2>Vehicle Log</h2>
+        <table id="logTable">
+            <thead>
+                 <tr>
+                    <th>Vehicle ID</th>
+                    <th>Enter/Exit Status</th>
+                    <th>Vehicle Type</th>
+                    <th>Registration Number</th>
+                    <th>Time Stamp</th>
+                 </tr>
+            </thead>
+          <tbody>
+             <!-- Log Entries Will Appear Here -->
+            </tbody>
+        </table>
+         <button id="downloadBtn">Download Report</button>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html
